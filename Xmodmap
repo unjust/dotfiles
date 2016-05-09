@@ -1,0 +1,9 @@
+clear Control
+clear Mod1
+clear Mod2
+clear Mod3
+clear Mod4
+clear Mod5
+keycode 63 = Control_L Control_L Control_L Control_L
+
+add Control = Control_L
