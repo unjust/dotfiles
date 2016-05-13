@@ -45,6 +45,9 @@ alias logcat=$ADB_PATH' logcat -c;'$ADB_PATH' logcat -v raw browser:I Console:D 
 ACCESS_KEY_ID="AKIAIRYFRPROL2JYOHDQ"
 ACCESS_KEY="Tj7/Cig42kq9hOCeVri0gl5cE+Hmdu64cbnH4TVK"
 
+# docker
+eval $(docker-machine env local)
+
 #Shows current branch in bash prompt
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
