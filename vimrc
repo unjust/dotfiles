@@ -27,6 +27,7 @@ Plugin 'mxw/vim-jsx'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 "
@@ -80,3 +81,8 @@ au BufNewFile,BufRead *.json set expandtab
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>"
+let NERDRemoveExtraSpaces=1
+let NERDSpaceDelims=1
+map <Leader>n :NERDTreeToggle<CR>
+map <leader>/ <plug>NERDCommenterToggle<CR>
+imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>
