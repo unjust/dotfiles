@@ -4,7 +4,7 @@
 [push]
 	default = current
 [core]
-	editor = vi
+	editor = vim
 [alias]
     incoming = !br=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'` && git log origin/$br ^$br
     outgoing = !br=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'` && git log $br ^origin/$br
