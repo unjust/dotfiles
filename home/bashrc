@@ -19,6 +19,6 @@ set -a  # auto-export all subequent env variable assignments
 source $HOME/.mupweb.config
 set +a  # turn off auto-export of env variables
 
-}}
+# }}
 
 umask 002
