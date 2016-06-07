@@ -20,12 +20,15 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fortes/vim-escuro'
 Plugin 'mattn/emmet-vim'
-Plugin 'ternjs/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+" to install Launch vim and run :PluginInstall
+
 filetype plugin indent on    " required
 
 " To ignore plugin indent changes, instead use:
@@ -52,15 +55,17 @@ set sw=4
 set ai
 set noexpandtab
 
-set incsearch
-set hlsearch
-set ignorecase
-set modeline
+" set incsearch
+" set hlsearch
+" set ignorecase
+" set modeline
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1
+" set foldmethod=indent   "fold based on indent
+" set foldnestmax=10      "deepest fold is 10 levels
+" set nofoldenable        "dont fold by default
+" set foldlevel=1
+
+set backspace=indent,eol,start " backspace over everything in insert mode
 
 filetype plugin on
 
