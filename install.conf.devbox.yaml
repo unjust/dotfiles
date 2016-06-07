@@ -1,0 +1,9 @@
+
+
+- link:
+    ~/.bash_profile: devbox/bash_profile.devbox
+    ~/.bashrc: devbox/bashrc.devbox
+    ~/.gitconfig: devbox/gitconfig.devbox
+    ~/.vimrc: devbox/vimrc.devbox
+
+
