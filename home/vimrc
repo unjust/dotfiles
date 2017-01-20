@@ -1,14 +1,18 @@
-set nocompatible              " be iMproved, required
+" Plugins with Vundle {{{
+
+set nocompatible              " be iMproved, keep vim enhancements required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 " alternatively, pass a path where Vundle should install plugins
 " call vundle#begin('~/.vim/plugin')
 "
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 "
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -20,13 +24,17 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'fortes/vim-escuro'
 Plugin 'mattn/emmet-vim'
+
 " Plugin 'ternjs/tern_for_vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
+
 call vundle#end()            " required
+
 " to install Launch vim and run :PluginInstall
 
 filetype plugin indent on    " required
@@ -45,15 +53,45 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-syntax on
-colorscheme escuro
-" colorscheme desert
+" Nerdtree Config {{{
 
-set ts=4
-set sts=4
-set sw=4
-set ai
-set noexpandtab
+map <C-n> :NERDTreeToggle<CR>"
+let NERDRemoveExtraSpaces=1
+let NERDSpaceDelims=1
+map <Leader>n :NERDTreeToggle<CR>
+map <leader>/ <plug>NERDCommenterToggle<CR>
+imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>
+
+" }}}
+
+" Emmit autocomplete {{{
+
+let g:user_emmet_leader_key='<C-z>'
+
+" }}}
+
+
+" Colors {{{
+
+syntax enable
+colorscheme escuro
+
+" }}}
+
+" Tabs and Spaces {{{
+
+set ts=4						" number of visual spaces per TAB
+set sts=4						" number of spaces in tab when editing
+set sw=4						" shiftwidth
+set ai							" auto indent
+set noexpandtab					" tabs are spaces
+set backspace=indent,eol,start	" backspace over everything in insert mode
+set number 
+
+au BufNewFile,BufRead *.py set expandtab
+au BufNewFile,BufRead *.json set expandtab
+
+" }}}
 
 " set incsearch
 " set hlsearch
@@ -65,12 +103,15 @@ set noexpandtab
 " set nofoldenable        "dont fold by default
 " set foldlevel=1
 
-set backspace=indent,eol,start " backspace over everything in insert mode
 
-filetype plugin on
+" Window Tabs {{{
 
 nnoremap t :tabnext<CR>
 nnoremap T :tabprev<CR>
+
+" }}}
+
+" Show Invisible Chars {{{
 
 let mapleader="_"
 noremap <leader>i :set list!<cr>
@@ -78,16 +119,12 @@ set listchars=tab:▸\ ,eol:¬,trail:.,precedes:<,extends:>
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+" }}}
+
+" vimrc Editing {{{
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-au BufNewFile,BufRead *.py set expandtab
-au BufNewFile,BufRead *.json set expandtab
+" }}}
 
-" nerdtree
-map <C-n> :NERDTreeToggle<CR>"
-let NERDRemoveExtraSpaces=1
-let NERDSpaceDelims=1
-map <Leader>n :NERDTreeToggle<CR>
-map <leader>/ <plug>NERDCommenterToggle<CR>
-imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>

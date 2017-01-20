@@ -18,6 +18,7 @@ fi
 set -a  # auto-export all subequent env variable assignments
 source $HOME/.mupweb.config
 set +a  # turn off auto-export of env variables
+alias mup-web="npm start && npm run tail"
 
 # }}
 
