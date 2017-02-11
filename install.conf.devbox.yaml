@@ -1,4 +1,6 @@
+# install files for meetup devbox
 
+- clean: ['~']
 
 - link:
     ~/.bash_profile: devbox/bash_profile.devbox

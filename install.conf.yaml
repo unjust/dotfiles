@@ -6,6 +6,7 @@
     ~/.gitconfig: home/gitconfig
     ~/.vimrc: home/vimrc
     ~/.Xmodmap: home/Xmodmap
+    ~/.eslintrc.js: home/eslintrc.js
     ~/powerline-shell.py : home/powerline-shell.py
 
 

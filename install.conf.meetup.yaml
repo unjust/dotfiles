@@ -1,0 +1,10 @@
+# dotfiles conf for meetup specific stuff
+# run after devbox or home setup
+
+- clean: ['~']
+
+- link:
+    ~/.mupweb.secrets: meetup/mupweb.secrets
+    ~/.mupweb.config: meetup/mupweb.config
+
+

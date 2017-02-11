@@ -29,8 +29,8 @@ class Powerline:
         'patched': {
             'lock': u'\uE0A2',
             'network': u'\uE0A2',
-            'separator': u'\uE0B0',
-            'separator_thin': u'\uE0B1'
+            'separator': '',
+            'separator_thin': u'\u276F'
         },
         'flat': {
             'lock': '',
@@ -147,6 +147,7 @@ class RepoStats:
                 s = u" {}{} ".format(self.n_or_empty(_key), self.symbols[_key])
                 powerline.append(s, fg, bg)
         """
+        commenting out to not have the full line
         add('ahead', color.GIT_AHEAD_FG, color.GIT_AHEAD_BG)
         add('behind', color.GIT_BEHIND_FG, color.GIT_BEHIND_BG)
         add('staged', color.GIT_STAGED_FG, color.GIT_STAGED_BG)
@@ -290,7 +291,7 @@ class Color(DefaultColor):
     PATH_BG = 8 # dark grey
     PATH_FG = 7 # light grey
     CWD_FG = 15 # white
-    SEPARATOR_FG = 7
+    SEPARATOR_FG = 15
 
     READONLY_BG = 1
     READONLY_FG = 15
@@ -536,8 +537,8 @@ def add_git_segment(powerline):
     branch_info = parse_git_branch_info(status)
 
     if branch_info:
-        # stats.ahead = branch_info["ahead"]
-        # stats.behind = branch_info["behind"]
+        stats.ahead = branch_info["ahead"]
+        stats.behind = branch_info["behind"]
         branch = branch_info['local']
     else:
         branch = _get_git_detached_branch()
