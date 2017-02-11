@@ -1,13 +1,13 @@
 # dotfiles
 
-Using (dotfiles)[https://dotfiles.github.io/] to manage my setup  
-There are different yaml files in the repo to config my devbox, work laptop and home laptops. 
+Using [dotfiles](https://dotfiles.github.io/) to manage my setup  
+There are different yaml files in the repo to config my devbox, work laptop and home laptops.  
 Installing dotfiles for each can be done by running install with the `--config` param to the file
 
 At the most basic, my environment includes:  
 * [Vundle](https://github.com/VundleVim/Vundle.vim) to manage all vim plugins  
 * [Powerline shell](https://github.com/banga/powerline-shell)
-* eslint_d for Syntastic
+* [eslint_d](https://www.npmjs.com/package/eslint_d) for Syntastic
 
 ## Steps
 1. Clone this repo  
