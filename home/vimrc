@@ -19,6 +19,8 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
 
+" Launch vim and run :PluginInstall
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
@@ -66,7 +68,8 @@ imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>
 
 " Emmit autocomplete {{{
 
-let g:user_emmet_leader_key='<C-z>'
+" let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key=','
 
 " }}}
 
